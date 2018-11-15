@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="report">
+    <test name="report">
+        <classes>
+            <class name="cn.code.testng.extentreport.TestMethodDemo">
+                <methods>
+                    <include name="testFail"/>
+                    <include name="testSuccess1"/>
+                    <include name="testSuccess2"/>
+                    <include name="logDemo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="cn.code.testng.extentreport.ExtentTestNgIReporterListener"/>
+    </listeners>
+</suite>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="suiteName">
+    <test name="runAll">
+        <classes>
+            <class name="cn.code.testng.dependency.DependOnGroups1"/>
+            <class name="cn.code.testng.dependency.DependOnGroups2"/>
+            <class name="cn.code.testng.dependency.DependOnGroups3"/>
+
+        </classes>
+
+    </test>
+    <test name="runTeacher">
+        <groups>
+            <run>
+                <include name="teacher"/>
+            </run>
+
+
+
+        </groups>
+
+
+
+        <classes>
+            <class name="cn.code.testng.dependency.DependOnGroups1"/>
+            <class name="cn.code.testng.dependency.DependOnGroups2"/>
+            <class name="cn.code.testng.dependency.DependOnGroups3"/>
+
+
+        </classes>
+
+
+
+
+    </test>
+
+</suite>

@@ -1,0 +1,151 @@
+[
+  {
+    "description": "first moco framework demo",
+    "request": {
+      "uri": "/demo"
+    },
+    "response": {
+      "text": "第一个moco框架demo"
+    }
+  },
+  {
+    "description": "无参数get请求mock",
+    "request": {
+      "uri": "/getdemo",
+      "method": "get"
+    },
+    "response": {
+      "text": "无参数的get请求mock"
+    }
+  },
+  {
+    "description": "带参数的get请求mock",
+    "request": {
+      "uri": "/getwithparam",
+      "method": "get",
+      "queries": {
+        "name": "test",
+        "age": "18"
+      }
+    },
+    "response": {
+      "text": "带参数get请求mock"
+    }
+  },
+  {
+    "description": "无参数的post请求mock",
+    "request": {
+      "uri": "/postdemo",
+      "method": "post"
+    },
+    "response": {
+      "text": "无参数post请求mock"
+    }
+  },
+  {
+    "description": "带参数的post请求mock",
+    "request": {
+      "uri": "/postwithparam",
+      "method": "post",
+      "forms": {
+        "name": "test",
+        "sex": "man",
+        "age": "18"
+      }
+    },
+    "response": {
+      "text": "带参数的post请求mock"
+    }
+  },
+  {
+    "description": "带返回cookies的get请求",
+    "request": {
+      "uri": "/getcookies",
+      "method": "get"
+    },
+    "response": {
+      "cookies": {
+        "login": "true"
+      },
+      "text": "获得cookies信息成功"
+    }
+  },
+  {
+    "description": "带cookies的get请求mock",
+    "request": {
+      "uri": "/getwithcookies",
+      "method": "get",
+      "cookies": {
+        "login": "true"
+      }
+    },
+    "response": {
+      "text": "带cookies的get请求mock"
+    }
+  },
+  {
+    "description": "带cookies的post请求mock",
+    "request": {
+      "uri": "/postwithcookies",
+      "method": "post",
+      "cookies": {
+        "login": "true"
+      },
+      "json": {
+        "name": "demo",
+        "age": "18"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "demo": "success",
+        "status": "1"
+      }
+    }
+  },
+  {
+    "description": "带header的post请求的mock",
+    "request": {
+      "uri": "/header",
+      "method": "post",
+      "headers": {
+        "content-type": "application/json"
+      },
+      "forms": {
+        "name": "test",
+        "sex": "woman"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "test": "success",
+        "status": 1
+      }
+    }
+  },
+  {
+    "description": "重定向到百度",
+    "request": {
+      "uri": "/redirect"
+    },
+    "redirectTo": "http://www.baidu.com"
+  },
+  {
+    "description": "重定向到一个自己的网页上",
+    "request": {
+      "uri": "/redirect/topath"
+    },
+    "redirectTo": "/redirect/new"
+  },
+  {
+    "description": "重定向后的网页",
+    "request": {
+      "uri": "/redirect/new"
+    },
+    "response": {
+      "text": "redirect Success"
+    }
+  }
+]
